@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="view   port" content="width=device-width, initial-scale=1.0"> -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Crypto Quote - Contact form </title>
+    <!-- loading bootstrap lib CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- loading page css file -->
+    <link rel="stylesheet" type="text/css" href="./css/members-page.css">
+    <link rel="stylesheet" type="text/css" href="./css/custom.css">
+
+</head>
+
+<body>
+
+    <!--  >>>>>> NAVBAR <<<<<< -->
+    <div class="static-navbar">
+        <nav class="navbar fixed-top navbar-light bg-light">
+            <a class="navbar-brand" href="./home.html"> <img src="../images/wallet.png" href='./home.html' width="30"
+                    height="30" class="d-inline-block align-top" alt="crypto quote icon"> Crypto Quote</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <!-- can use active for current page-->
+                        <a class="nav-link" href="./index.html">Home </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="######">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="./infov2.html">Contact</a>
+                    </li>
+                </ul>
+                <!-- Log-in Button -->
+                <p><a class="btn btn-sm btn-outline-secondary" href="./index.html" role="button">Log-in &raquo;</a></p>
+
+                </span>
+            </div>
+        </nav>
+    </div>
+
+
+    <main role="main">
+        <div class="container-fluid contact-form">
+            <h2 class='text-center '>We’d love to hear from you</h2>
+
+            <p class='text-center'>Whether you have a question about features, trials, pricing, need a demo, or anything
+                else, our team is ready to answer all your questions</p>
+
+
+        </div>
+        <div class="container mx-auto" style="padding-top: 20px;">
+            <div class="d-flex justify-content-center">
+
+                <form id="contact-form" action="mailto:eduardopezzi@me.com" method="post" enctype="text/plain">
+                    <div class="messages"></div>
+
+                    <div class="controls">
+
+                        <div class="d-flex">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="form_name">Firstname *</label>
+                                    <input id="form_name" name="name" class="form-control"
+                                        placeholder="Please enter your name *" required="required"
+                                        data-error="Valid email is required.">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="form_lastname">Lastname *</label>
+                                    <input id="form_lastname" name="surname" class="form-control"
+                                        placeholder="Please enter your name *" required="required"
+                                        data-error="Valid email is required.">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="form_email">Email *</label>
+                                    <input id="form_email" type="email" name="email" class="form-control"
+                                        placeholder="Please enter your email *" required="required"
+                                        data-error="Valid email is required.">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="form_phone">Phone</label>
+                                    <input id="form_phone" type="tel" name="phone" class="form-control"
+                                        placeholder="Please enter your phone">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="form_message">Message *</label>
+                                    <textarea id="form_message" name="message" class="form-control"
+                                        placeholder="Message for me *" rows="4" required="required"
+                                        data-error="Please,leave us a message."></textarea>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex">
+                            <div class="col-md-12">
+                                <input type="submit" class="btn btn-primary btn-send" value="Send message">
+                            </div>
+                        </div>
+
+                    </div>
+                </form>
+            </div><!-- /.8 -->
+
+            <hr>
+        </div> <!-- /.container-->
+
+    </main>
+
+    <footer class="container">
+        <p>&copy; Company 2017-2019 <a href="./infov2.html">Contact us</a></p>
+    </footer>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS, axios-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script type='application/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.js'></script>
+    <script type='application/javascript' src='./javascript/welcome-page.js'></script>
+
+</body>
+
+</html>

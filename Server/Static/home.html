@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="view   port" content="width=device-width, initial-scale=1.0"> -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Crypto Quote - Welcome </title>
+    <!-- loading bootstrap lib CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- loading page css file -->
+    <link rel="stylesheet" type="text/css" href="./CSS/custom.css">
+    <link rel="stylesheet" type="text/css" href="./CSS/members-page.css">
+
+</head>
+
+<body>
+
+    <!--  >>>>>> NAVBAR <<<<<< -->
+    <div class="static-navbar">
+        <nav class="navbar fixed-top navbar-light bg-light">
+            <a class="navbar-brand" href="index.html"> <img src="./images/wallet.png" href="index.html" width="30"
+                    height="30" class="d-inline-block align-top" alt="cryoto quote icon"> Crypto Quote</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <!-- can use active for current page-->
+                        <a class="nav-link active" href="home.html">Home </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="infov2.html">Contact</a>
+                    </li>
+                </ul>
+                <!-- Log-in Button -->
+                <p><a class="btn btn-sm btn-outline-secondary" href="index.html" role="button">Log-in &raquo;</a></p>
+
+                </span>
+            </div>
+        </nav>
+    </div>
+
+
+    <main role="main">
+
+        <!-- Main jumbotron for a primary marketing message or call to action -->
+        <div class="jumbotron">
+            <div class="container">
+                <h1 class="display-3 text-center font-weight-bold">CRYPTO QUOTE</h1>
+                <h3 class='text-center'>The simple way to go Crypto!</h3>
+                <p class='text-center' style="font-weight: bold; font-size: 20px;">Sign up an learn more about Crypto...
+                </p>
+                <p class="text-center"><a class="btn btn-primary btn-lg" href="signin.html" role="button">Sign-up
+                        &raquo;</a></p>
+            </div>
+        </div>
+
+        <div class="container px-0 w-auto">
+
+            <!-- >>>>> QUOTATION TABLE <<<<< -->
+            <table class="table table-striped table-dark fluid" id='crypto-table'>
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Crypto</th>
+                        <th scope="col">Symbol</th>
+                        <th scope="col">Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Bitcoin</td>
+                        <td>BTC</td>
+                        <td>CAD$ <span id='btc' style='font-weight:bold'> </span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Ethereum</td>
+                        <td>ETH</td>
+                        <td>CAD$ <span id='eth' style='font-weight:bold'> </span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Litecoin</td>
+                        <td>LTC</td>
+                        <td>CAD$ <span id='ltc' style='font-weight:bold'> </span></td>
+                    </tr>
+                    <th scope="row">4</th>
+                    <td>Bitcoin Cash</td>
+                    <td>BCH</td>
+                    <td>CAD$ <span id='bch' style='font-weight:bold'> </span></td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+        <div class="container">
+            <!-- Example row of columns -->
+            <div class="row">
+                <div class="col-md-4 text-justify">
+                    <h2>Crypto Exchange</h2>
+                    <p>Crypto trading, or cryptocurrency trading, is simply the exchange of cryptocurrencies.
+                        Like in Forex, you can also buy and sell a cryptocurrency for another,
+                        like Bitcoin or altcoin for USD and Euro. This is one way of getting involved
+                        in the world of cryptocurrencies without having to mine it.</p>
+                    <p><a class="btn btn-secondary" href="signin.html" role="button">learn more &raquo;</a></p>
+                </div>
+                <div class="col-md-4 text-justify">
+                    <h2>Ethereum in short</h2>
+                    <p>Ethereum is both a cryptocurrency and a decentralized computing platform.
+                        Developers can use the platform to create decentralized applications and
+                        issue new crypto assets, known as Ethereum tokens. </p>
+                    <p><a class="btn btn-secondary" href="https://www.ethereum.org/" role="button">learn more
+                            &raquo;</a></p>
+                </div>
+                <div class="col-md-4 text-justify">
+                    <h2>Cryptocurrency Wallet</h2>
+                    <p>A cryptocurrency wallet is a secure digital wallet used to store, send,
+                        and receive digital currency like Bitcoin. Most coins have an official wallet.
+                        In order to use cryptocurrency, you’ll need to use a cryptocurrency wallet.</p>
+                    <!-- <p><a class="btn btn-secondary" href="#" role="button">learn more &raquo;</a></p> -->
+                </div>
+            </div>
+
+            <hr>
+
+        </div> <!-- /container -->
+
+    </main>
+
+    <footer class="container">
+        <p>&copy; Company 2017-2019 <a href="infov2.html">Contact us</a></p>
+    </footer>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS, axios-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script type='application/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.js'></script>
+    <script type='application/javascript' src='./JS/welcome-page.js'></script>
+
+</body>
+
+</html>
