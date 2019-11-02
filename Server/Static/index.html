@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-storage.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-messaging.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-functions.js"></script>
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+     <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyB7YZWn2xtUDO4g7jZUBywjIi3zIrbeW64",
+        authDomain: "finalproject-9ce10.firebaseapp.com",
+        databaseURL: "https://finalproject-9ce10.firebaseio.com",
+        projectId: "finalproject-9ce10",
+        storageBucket: "finalproject-9ce10.appspot.com",
+        messagingSenderId: "926911554778",
+        appId: "1:926911554778:web:177a9f0894c8766b96b1e3"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!--<script src="./JS/script.js"></script>-->
+</head>
+<body>
+  <br>
+  <br>
+  <div class="container" style="border-radius: 10px;">
+      <div class="row" >
+      <div class="col-md-6">
+          <div class="card" style="width: 290px;">
+              <header class="card-header">
+              <a href="signin.html" class="float-right btn btn-outline-primary">Sign in</a>
+              <h4 class="card-title mb-2 mt-1">Log in</h4>
+              </header>
+              <article class="card-body">
+                <form>
+                  <div class="form-group">
+                    <label>Email</label>
+                      <input type="email" name="email" id="txtemail">
+                      <input type="button" value="Check" onclick="checkuser();">
+                  </div>
+                  <div class="border-top card-body text-center">Return to <a href="home.html">Home
+                  </a></div>
+                </form> 
+              </article>
+              </div>
+      </div>
+      </div>
+  </div>
+</body>
+<script>
+  //const iduser = 1;
+  
+  async function checkuser(){
+  
+  
+  var txtemail = document.getElementById('txtemail').value;
+  
+  //var databaseref = firebase.database().ref(`/email`);
+  //var iduser = 1;
+  //console.log(iduser);
+  
+ 
+  var datafirebase= await firebase.database().ref(`/email/user`).orderByKey();
+  
+  //var datafirebase=firebase.database().ref(`/email/user`);
+  console.log(datafirebase.value);
+ 
+  let result = await datafirebase.once('value')
+  
+    console.log(result)
+    result.forEach(item=>{
+      var firebaseemail = item.val().user_id;
+      if (txtemail == firebaseemail){
+        console.log("Welcome")
+        window.localStorage.setItem("name",firebaseemail);
+        var firebasecoins = item.val().coins;
+        var firebasename = item.val().firstname;
+        window.localStorage.setItem("coins", firebasecoins);
+        window.localStorage.setItem("firstname", firebasename);
+        window.location.href = "/user"
+        
+      }
+      
+      //console.log(item.val().coins)
+    })
+
+    /*.then(function(snapshot){
+      console.log(snapshot);
+        snapshot.forEach(function(childSnapshot){
+          
+          var key = childSnapshot.key;
+          var childData = childSnapshot.val();
+            if (childData == txtemail){
+              console.log ('ok');
+              console.log(childData);
+            }
+        });
+        window.alert("Your user do not exist in our database. Please click on Sign In to register.")
+      });*/
+        
+     
+ 
+  
+};
+  
+            
+
+          
+    
+    
+   // console.log("hello");
+    
+     /*databaseref.once("value", function (snapshot) {
+        if (snapshot.exists()){
+          const existemail = snapshot.val();
+          console.log(`${existemail}`);
+            if (existemail == txtemail){
+              window.alert('data ok');
+            }else{
+              var databasepos = firebase.collection("email").doc(`${iduser}`);
+                console.log(`${iduser}`)
+                while (iduser <= databasepos.length + 1 ){
+                  console.log('while ok')
+                  iduser ++;
+                  //console.log(iduser);
+                  checkuser();
+                  }
+                }
+              
+            }else{
+              window.alert(`The email ${txtemail} does not exist in our database`);
+            }
+          });*/
+      
+    
+</script>
+</html>
